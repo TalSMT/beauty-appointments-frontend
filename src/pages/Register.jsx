@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import styles from "./Register.module.css";  
+import { Link } from "react-router-dom";
 
 function Register() {
   const [name, setName] = useState("");
@@ -21,29 +23,30 @@ function Register() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Register</h2>
+    <div className={styles.page}>
+      <div className={styles.card}>
+      <h2 className={styles.title}>הרשמה</h2>
 
-      <input
-        placeholder="Name"
+      <input className={styles.input}
+        placeholder="שם מלא"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
 
-      <br /><br />
 
-      <input
-        placeholder="Phone"
+      <input className={styles.input}
+        placeholder="טלפון"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
       />
-
-      <br /><br />
-
-      
-      <button onClick={handleRegister}>
-        Register
+     
+      <button className={styles.button} onClick={handleRegister}>
+        הרשמה
       </button>
+      <p>
+        יש לך משתמש? <Link className={styles.link} to="/login">להתחברות</Link>
+       </p>
+    </div>
     </div>
   );
 }
