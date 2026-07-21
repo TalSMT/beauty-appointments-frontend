@@ -25,11 +25,11 @@ function BookAppointment() {
     const loadData = async ()=>{
       try{
         //טעינת טיפולים
-        const treatmentsRes = await axios.get(`http://localhost:8080/treatments`);
+        const treatmentsRes = await axios.get(`${import.meta.env.VITE_API_URL}/treatments`);
        setTreatments(treatmentsRes.data);
        //אם מדובר בעריכה- טען פרטי תור
        if (id){
-        const appointmentRes = await axios.get(`http://localhost:8080/appointments/${id}`);
+        const appointmentRes = await axios.get(`${import.meta.env.VITE_API_URL}/appointments/${id}`);
         console.log(appointmentRes.data);
         const treatment = appointmentRes.data.treatmentId;
         const dt = appointmentRes.data.dateTime;
@@ -62,7 +62,7 @@ function BookAppointment() {
   try {
     const dateTime = `${selectedDate}T${selectedHour}`
     if(id){
-      await axios.put(`http://localhost:8080/appointments/${id}`,{
+      await axios.put(`${import.meta.env.VITE_API_URL}/appointments/${id}`,{
 
       dateTime,
       treatment:{id :treatmentId},
@@ -71,7 +71,7 @@ function BookAppointment() {
     toast.success("התור עודכן בהצלחה");
     }
     else{
-       await axios.post(`http://localhost:8080/appointments`, {
+       await axios.post(`h${import.meta.env.VITE_API_URL}/appointments`, {
          dateTime,
          treatmentId,
           customerId: user.id
@@ -107,7 +107,7 @@ const formatSelectedDate = (value) => {
 
 const loadAvailableHours = async (data,treatment) =>{
   try{
-    const response = await axios.get(`http://localhost:8080/appointments/available-hours`,{params:{
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/appointments/available-hours`,{params:{
       date : data,
       treatmentId : treatment
     }});

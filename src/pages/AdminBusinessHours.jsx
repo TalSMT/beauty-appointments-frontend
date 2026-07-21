@@ -13,7 +13,7 @@
     const [conflicts, setConflicts] = useState([]);
 
     useEffect(()=>{
-        axios.get(`http://localhost:8080/business-hours`)
+        axios.get(`${import.meta.env.VITE_API_URL}/business-hours`)
         .then(res=> setHours(res.data))
         .catch(err => console.log(err),[]);
     },[]);
@@ -21,14 +21,14 @@
     const save = async () => {
         try{
             const conflictResponse = 
-            await axios.post(`http://localhost:8080/business-hours/check-conflicts`,hours);
+            await axios.post(`${import.meta.env.VITE_API_URL}/business-hours/check-conflicts`,hours);
             console.log(conflictResponse.data);
 
             if(conflictResponse.data.hasConflicts){
                 setConflicts(conflictResponse.data.appointments);
                 return;
             }
-             await axios.put(`http://localhost:8080/business-hours`,hours);
+             await axios.put(`${import.meta.env.VITE_API_URL}/business-hours`,hours);
              toast.success("השעות נשמרו בהצלחה");
             }
         catch(err){

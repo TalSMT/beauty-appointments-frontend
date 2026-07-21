@@ -25,14 +25,14 @@
    const loadAppointments = async () => {
     try {
       const activeResponse = await axios.get(
-        "http://localhost:8080/appointments/customers",
+        `${import.meta.env.VITE_API_URL}/appointments/customers`,
         { params: { customerId: user.id } }
       );
 
       setAppointments(activeResponse.data);
 
       const historyResponse = await axios.get(
-        "http://localhost:8080/appointments/history",
+        `${import.meta.env.VITE_API_URL}/appointments/history`,
         { params: { customerId: user.id } }
       );
 
@@ -51,16 +51,16 @@
 
     const handleCancel = async (id) =>{
       console.log("DELETE ID:",id);
-      console.log("URL:",`http://localhost:8080/appointments/${id}/cancel`);
+      console.log("URL:",`${import.meta.env.VITE_API_URL}/appointments/${id}/cancel`);
       if(!window.confirm("לבטל את התור?")) return;
       try{
-          await axios.put(`http://localhost:8080/appointments/${id}/cancel`);
+          await axios.put(`${import.meta.env.VITE_API_URL}/appointments/${id}/cancel`);
       
       
       toast.error("❌ התור בוטל ");
       console.log(id);
 
-      /*const response = await axios.get(`http://localhost:8080/appointments/customers`,{params:{customerId:user.id}});*/
+      /*const response = await axios.get(`${import.meta.env.VITE_API_URL}/appointments/customers`,{params:{customerId:user.id}});*/
       await loadAppointments();
       setAppointments(response.data);
       }

@@ -10,7 +10,7 @@ function AdminAppointments() {
    
 
   useEffect(() => {
-    axios.get("http://localhost:8080/appointments/active")
+    axios.get(`${import.meta.env.VITE_API_URL}/appointments/active`)
       .then(res => setAppointments(res.data))
       .catch(err => console.log(err));
   }, []);

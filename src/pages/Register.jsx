@@ -14,7 +14,7 @@ function Register() {
   const handleRegister = async () => {
     try{
       await
-      axios.post("http://localhost:8080/customers",{name,phone});
+      axios.post(`${import.meta.env.VITE_API_URL}/customers`,{name,phone});
       toast.success("נרשמת בהצלחה");
       navigate("/");
     }
