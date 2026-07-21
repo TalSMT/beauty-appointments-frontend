@@ -3,8 +3,11 @@ import axios from "axios";
 import Navbar from "../assets/components/Navbar";
 import styles from "./AdminAppointments.module.css";
 
+
 function AdminAppointments() {
   const [appointments, setAppointments] = useState([]);
+  
+   
 
   useEffect(() => {
     axios.get("http://localhost:8080/appointments/active")
@@ -19,6 +22,7 @@ function AdminAppointments() {
     }
     return String(dt).replace("T", " ");
   };
+      
 
   return (
     <div>
@@ -27,7 +31,7 @@ function AdminAppointments() {
       <div className={styles.pageContainer}>
 
         <h2 className={styles.title}>
-          ניהול תורים 👑
+          ניהול תורים 
         </h2>
 
         {appointments.length === 0 ? (
@@ -55,6 +59,8 @@ function AdminAppointments() {
                 <div className={styles.text}>
                   📞 {app.customer?.phone}
                 </div>
+
+                
 
               </div>
             ))}

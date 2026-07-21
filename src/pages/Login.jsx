@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
+import { toast } from "react-toastify";
 
 function Login() {
   const [phone, setPhone] = useState("");
@@ -18,7 +19,7 @@ function Login() {
       );
 
       setUser(res.data);
-      alert("ברוכה הבאה " + res.data.name);
+      toast.success("ברוכה הבאה " + res.data.name);
       localStorage.setItem("customer",JSON.stringify(res.data));
      // setError("");
       if (res.data.role === "ADMIN"){
@@ -32,13 +33,13 @@ function Login() {
 
     } catch (err) {
       if (err.response?.status === 404) {
-        alert("משתמש לא קיים");
+        toast.error("משתמש לא קיים");
        // setError("משתמש לא קיים");
       } else {
         console.log("Error:",err);
         console.log("Message:",err.message);
         console.log("Response:",err.response);
-        alert("שגיאה בהתחברות");
+        toast.error("שגיאה בהתחברות");
       }
     }
   };

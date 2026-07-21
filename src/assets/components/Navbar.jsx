@@ -41,9 +41,13 @@ function Navbar() {
 
         {isAdmin && (
           <Link className={styles.link} to="/adminappointments">
-            ניהול
+           ניהול תורים
           </Link>
         )}
+        {isAdmin &&
+        <Link className={styles.link} to ="/business-hours">
+              ניהול שעות פעילות
+          </Link>}
 
       </div>
 

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styles from "./Register.module.css";  
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Register() {
   const [name, setName] = useState("");
@@ -14,11 +15,11 @@ function Register() {
     try{
       await
       axios.post("http://localhost:8080/customers",{name,phone});
-      alert("נרשמת בהצלחה");
+      toast.success("נרשמת בהצלחה");
       navigate("/");
     }
     catch{
-      alert("שגיאה בהרשמה");
+      toast.error("שגיאה בהרשמה");
     }
   };
 
