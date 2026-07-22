@@ -88,6 +88,18 @@
           return " ";
         }
       };
+       const formatDateTime = (dateTime) =>{
+        const date = new Date (dateTime);
+        return date.toLocaleString("he-IL",{
+            day:"2-digit",
+            month:"2-digit",
+            year:"numeric",
+            hour:"2-digit",
+            minute:"2-digit"
+
+        });
+
+    }
 
 return (
   <div
@@ -109,7 +121,7 @@ return (
 
               {/* תאריך */}
               <div className={styles.date}>
-                📅 {formatDate(appointment.dateTime)}
+                📅 {formatDateTime(appointment.dateTime)}
               </div>
 
               {/* טיפול */}

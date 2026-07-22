@@ -111,11 +111,17 @@ const loadAvailableHours = async (data,treatment) =>{
       date : data,
       treatmentId : treatment
     }});
-    setAvailableHours(response.data);
+    setAvailableHours(response.data.filter (hour => !isPastTime(hour)));
   }
   catch(err){
     console.log(err);
   }
+}
+
+const isPastTime = (time)=>{
+  const now = new Date();
+  const selectedDateTime = new Date (`${selectedDate}T${time}`);
+  return selectedDateTime < now;
 }
 
    return (
