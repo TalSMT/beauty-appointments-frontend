@@ -17,7 +17,7 @@ function Login() {
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/login`,{phone:phone}
       );
-
+ console.log("login response:",res.data);
       setUser(res.data);
       toast.success("ברוכה הבאה " + res.data.name);
       localStorage.setItem("customer",JSON.stringify(res.data));
