@@ -1,3 +1,9 @@
+@media (max-width:600px){
+    .button{
+        width: 90%;
+        font-size: 14px;
+    }
+}
 .pageContainer {
     padding: 24px;
   

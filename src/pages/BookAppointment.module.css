@@ -1,3 +1,10 @@
+@media (max-width:600px){
+    .button{
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
 .pageContainer {
     padding: 20px;
     margin-top: 0;
@@ -73,6 +80,8 @@
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    max-width: 300px;
+    font-size: 16px;
 }
 .selectedTreatment{
     background: #f8bbd0;
