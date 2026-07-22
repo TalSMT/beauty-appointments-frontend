@@ -44,6 +44,7 @@
     font-size: 14px;
     text-align: right;
     background: white;
+    color:black;
 }
 
 .input:focus {

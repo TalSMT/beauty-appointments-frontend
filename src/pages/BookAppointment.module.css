@@ -2,6 +2,7 @@
     .button{
         width: 90%;
         font-size: 14px;
+        padding: 12px 15px;
     }
 }
 
@@ -72,7 +73,7 @@
 
 .button {
     margin-top: 20px;
-    width: 10%;
+    width: 100%;
     background: #d81b60;
     color: white;
     border: none;
@@ -82,6 +83,8 @@
     font-weight: bold;
     max-width: 300px;
     font-size: 16px;
+    white-space: nowrap;
+    min-height: 45px;
 }
 .selectedTreatment{
     background: #f8bbd0;
@@ -102,6 +105,7 @@
     background: white;
     cursor: pointer;
     transition: 0.2s;
+    color:black;
 }
 .hourButton:hover{
     background: #fbe4ec;
