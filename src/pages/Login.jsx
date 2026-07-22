@@ -21,6 +21,7 @@ function Login() {
       setUser(res.data);
       toast.success("ברוכה הבאה " + res.data.name);
       localStorage.setItem("customer",JSON.stringify(res.data));
+      console.log("local storge after save:",localStorage.getItem("customer"));
      // setError("");
       if (res.data.role === "ADMIN"){
         navigate("/adminappointments")
