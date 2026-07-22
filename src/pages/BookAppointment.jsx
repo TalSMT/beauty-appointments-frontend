@@ -71,7 +71,7 @@ function BookAppointment() {
     toast.success("התור עודכן בהצלחה");
     }
     else{
-       await axios.post(`h${import.meta.env.VITE_API_URL}/appointments`, {
+       await axios.post(`${import.meta.env.VITE_API_URL}/appointments`, {
          dateTime,
          treatmentId,
           customerId: user.id
