@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import { toast } from "react-toastify";
 
-function Login() {
+function Login({setUser}) {
   const [phone, setPhone] = useState("");
   const navigate = useNavigate();
 
@@ -19,6 +19,7 @@ function Login() {
 
       // שמירת המשתמש
       localStorage.setItem("customer", JSON.stringify(res.data));
+      setUser(res.data);
 
       console.log(
         "local storage after save:",
