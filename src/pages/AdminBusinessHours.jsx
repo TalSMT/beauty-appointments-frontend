@@ -15,7 +15,7 @@
     useEffect(()=>{
         axios.get(`${import.meta.env.VITE_API_URL}/business-hours`)
         .then(res=> setHours(res.data))
-        .catch(err => console.log(err),[]);
+        .catch(err => console.log(err));
     },[]);
 
     const save = async () => {
@@ -68,6 +68,7 @@
             <Navbar/>
         <h2 className={styles.title}>ניהול שעות פעילות</h2>
         <div className={styles.tableContainer}>
+        <div className={styles.tableWrapper}>
         <table className={styles.table}>
             <thead>
                 <tr>
@@ -111,6 +112,7 @@
         }
         </tbody>
         </table>
+        </div>
         
         <button className = {styles.saveButton} onClick={save}>שמור</button>
         {conflicts.length >0 && (

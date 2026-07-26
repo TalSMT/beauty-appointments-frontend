@@ -3,6 +3,10 @@
         width: 90%;
         font-size: 14px;
     }
+    .navbar a{
+        font-size: 14px;
+        padding: 8px;
+    }
 }
 
 .navbar {
@@ -15,6 +19,7 @@
     width: 100%;
     max-width: 100%;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .links {
