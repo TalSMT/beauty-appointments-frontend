@@ -59,3 +59,9 @@ npm run dev
 
 ## The application will run on:
 http://localhost:5173
+
+## Backend
+This frontend communicates with a Spring Boot REST API backend
+Backend repository:
+https://github.com/TalSMT/beauty-appointments-backend
+
