@@ -28,6 +28,15 @@ An admin interface is available for managing business hours and appointments.
 - Manage business hours
 - View and manage appointments
 
+### Architecture
+The application is built using a client-server architecture:
+Frontend:
+- React application
+- Communicates with backend using REST API
+Backend:
+- Spring Boot REST API
+- MySQL database
+
 ## Screenshots
 
 ### Login
