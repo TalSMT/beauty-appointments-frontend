@@ -49,3 +49,13 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/TalSMT/beauty-appointments-frontend.git
+
+## Install dependencies:
+npm install
+
+## Run the application:
+```bash
+npm run dev
+
+## The application will run on:
+http://localhost:5173
