@@ -1,16 +1,51 @@
-# React + Vite
+# Beauty Appointments - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for managing beauty salon appointments.
 
-Currently, two official plugins are available:
+The application allows customers to register, log in, view available appointments and manage their bookings.
+An admin interface is available for managing business hours and appointments.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies
 
-## React Compiler
+- React
+- JavaScript
+- HTML5
+- CSS Modules
+- Axios
+- React Router
+- React Toastify
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Customer
+- User registration and login
+- View available treatments
+- Book appointments
+- View appointment history
+- Manage personal appointments
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Admin
+- Manage business hours
+- View and manage appointments
+
+## Screenshots
+
+### Login
+![Login](screenshots/login.png)
+
+### Booking Appointment
+![Booking](screenshots/booking.png)
+
+### Customer Appointments
+![Appointments](screenshots/appointments.png)
+
+### Admin Dashboard
+![Admin](screenshots/admin.png)
+
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone <frontend-repository-url>
