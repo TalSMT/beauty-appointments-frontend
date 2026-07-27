@@ -48,4 +48,4 @@ An admin interface is available for managing business hours and appointments.
 Clone the repository:
 
 ```bash
-git clone <frontend-repository-url>
+git clone https://github.com/TalSMT/beauty-appointments-frontend.git
