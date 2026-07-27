@@ -31,16 +31,16 @@ An admin interface is available for managing business hours and appointments.
 ## Screenshots
 
 ### Login
-![Login](screenshots/login.png)
+![Login](screenshots/login.PNG)
 
 ### Booking Appointment
 ![Booking](screenshots/booking.PNG)
 
 ### Customer Appointments
-![Appointments](screenshots/appointments.png)
+![Appointments](screenshots/appointments.PNG)
 
 ### Admin Dashboard
-![Admin](screenshots/admin.png)
+![Admin](screenshots/admin.PNG)
 
 
 ## Running Locally
