@@ -34,7 +34,7 @@ An admin interface is available for managing business hours and appointments.
 ![Login](screenshots/login.png)
 
 ### Booking Appointment
-![Booking](screenshots/booking.png)
+![Booking](screenshots/booking.PNG)
 
 ### Customer Appointments
 ![Appointments](screenshots/appointments.png)
