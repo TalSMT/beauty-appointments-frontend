@@ -8,7 +8,8 @@ function Login({setUser}) {
   const [phone, setPhone] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/login`,
@@ -52,7 +53,8 @@ function Login({setUser}) {
       <div className={styles.card}>
         <div className={styles.title}>התחברות</div>
 
-        <div className={styles.form}>
+         {/*<div className={styles.form}>*/}
+         <form className={styles.form} onSubmit={handleLogin}>
 
           <input
             className={styles.input}
@@ -65,7 +67,7 @@ function Login({setUser}) {
 
           <button
             className={styles.button}
-            onClick={handleLogin}
+            type="submit"
           >
             התחברות
           </button>
@@ -77,7 +79,7 @@ function Login({setUser}) {
             </Link>
           </p>
 
-        </div>
+        </form>
       </div>
     </div>
   );
