@@ -10,6 +10,7 @@
 }
 
 .navbar {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,13 +19,13 @@
     border-bottom: 1px solid #f3c5d7;
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
     flex-wrap: wrap;
 }
 
 .links {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .link {
