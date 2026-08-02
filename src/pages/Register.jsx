@@ -11,7 +11,8 @@ function Register() {
   //const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleRegister = async () => {
+  const handleRegister = async (e) => {
+     e.preventDefault();
     try{
       await
       axios.post(`${import.meta.env.VITE_API_URL}/customers`,{name,phone});
@@ -27,6 +28,8 @@ function Register() {
     <div className={styles.page}>
       <div className={styles.card}>
       <h2 className={styles.title}>הרשמה</h2>
+       <form className={styles.form} onSubmit={handleRegister}>
+
 
       <input className={styles.input}
         placeholder="שם מלא"
@@ -41,12 +44,13 @@ function Register() {
         onChange={(e) => setPhone(e.target.value)}
       />
      
-      <button className={styles.button} onClick={handleRegister}>
+      <button className={styles.button} type="submit">
         הרשמה
       </button>
       <p>
         יש לך משתמש? <Link className={styles.link} to="/login">להתחברות</Link>
        </p>
+       </form>
     </div>
     </div>
   );
